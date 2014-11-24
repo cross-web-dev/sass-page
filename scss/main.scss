@@ -3,5 +3,44 @@
 @import "mixins";
 @import "sticky-footer";
 
+// -- Clearfix -- //
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 
-//@include stickFooter($Sticky-footer-height,".wrapper", ".foot");
+.row{
+    @extend .clearfix;
+}
+
+@media screen and (min-width: $breakpoint-large){
+    body{
+        background-color: blue;
+    }
+    .wrapper{
+        max-width: $breakpoint-large;
+        background-color: yellow;
+        margin: 0 auto;
+    }
+
+    /* The second row has the svg image boxes as three equal columns. */
+    .col-3{
+        background: #ccc;
+        float: left;
+        @include equalSpaced(3, 5%, 100%);
+        margin-bottom: 2%;
+    }
+
+    /* The third row will be four equal columns. */
+    .col-4{
+        background: #aaa;
+        float: left;
+        @include equalSpaced(4, 5%, 100%);
+    }
+
+    /* The footer, at the large sizes needs to be a sticky footer. */
+    @include stickFooter($Sticky-footer-height,".wrapper", ".foot");
+}

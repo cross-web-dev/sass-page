@@ -188,4 +188,58 @@ input[type="checkbox"], input[type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
+.clearfix:after, .row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+@media screen and (min-width: 960px) {
+  body {
+    background-color: blue; }
+
+  .wrapper {
+    max-width: 960px;
+    background-color: yellow;
+    margin: 0 auto; }
+
+  /* The second row has the svg image boxes as three equal columns. */
+  .col-3 {
+    background: #ccc;
+    float: left;
+    width: 30%;
+    margin-left: 5%;
+    margin-bottom: 2%; }
+    .col-3:first-child {
+      margin-left: 0; }
+
+  /* The third row will be four equal columns. */
+  .col-4 {
+    background: #aaa;
+    float: left;
+    width: 21.25%;
+    margin-left: 5%; }
+    .col-4:first-child {
+      margin-left: 0; }
+
+  /* The footer, at the large sizes needs to be a sticky footer. */
+  html, body {
+    height: 100%; }
+
+  /* Use interpolation syntax to use SassScript variables in selectors and property names*/
+  .wrapper {
+    min-height: 100%;
+    /* equal to footer height */
+    margin-bottom: -65px; }
+
+  .wrapper:after {
+    content: "";
+    display: block; }
+
+  .foot, .wrapper:after {
+    /* .push must be the same height as footer */
+    height: 65px; }
+
+  .foot {
+    background: orange; } }
+
 /*# sourceMappingURL=main.css.map */
