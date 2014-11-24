@@ -2,3 +2,6 @@
 @import "variables";
 @import "mixins";
 @import "sticky-footer";
+
+
+//@include stickFooter($Sticky-footer-height,".wrapper", ".foot");
