@@ -193,6 +193,42 @@ input[type="checkbox"], input[type="radio"] {
   display: table;
   clear: both; }
 
+.iconic {
+  fill: #c0a5ab; }
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    max-width: 600px;
+    margin: 0 auto; }
+
+  .col-3 {
+    width: 47.5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    float: left;
+    min-height: 420px; }
+    .col-3:first-child {
+      margin-left: 0; }
+    .col-3:nth-child(2n + 1) {
+      margin-left: 0; }
+    .col-3:nth-child(1) {
+      margin-top: 0; }
+    .col-3:nth-child(2) {
+      margin-top: 0; }
+
+  .col-4 {
+    width: 47.5%;
+    margin-left: 5%;
+    margin-top: 5%;
+    float: left; }
+    .col-4:first-child {
+      margin-left: 0; }
+    .col-4:nth-child(2n + 1) {
+      margin-left: 0; }
+    .col-4:nth-child(1) {
+      margin-top: 0; }
+    .col-4:nth-child(2) {
+      margin-top: 0; } }
 @media screen and (min-width: 960px) {
   body {
     background-color: blue; }
@@ -205,21 +241,40 @@ input[type="checkbox"], input[type="radio"] {
   /* The second row has the svg image boxes as three equal columns. */
   .col-3 {
     background: #ccc;
-    float: left;
     width: 30%;
     margin-left: 5%;
-    margin-bottom: 2%; }
+    margin-top: 5%;
+    float: left; }
     .col-3:first-child {
       margin-left: 0; }
+    .col-3:nth-child(3n + 1) {
+      margin-left: 0; }
+    .col-3:nth-child(1) {
+      margin-top: 0; }
+    .col-3:nth-child(2) {
+      margin-top: 0; }
+    .col-3:nth-child(3) {
+      margin-top: 0; }
 
   /* The third row will be four equal columns. */
   .col-4 {
     background: #aaa;
-    float: left;
     width: 21.25%;
-    margin-left: 5%; }
+    margin-left: 5%;
+    margin-top: 5%;
+    float: left; }
     .col-4:first-child {
       margin-left: 0; }
+    .col-4:nth-child(4n + 1) {
+      margin-left: 0; }
+    .col-4:nth-child(1) {
+      margin-top: 0; }
+    .col-4:nth-child(2) {
+      margin-top: 0; }
+    .col-4:nth-child(3) {
+      margin-top: 0; }
+    .col-4:nth-child(4) {
+      margin-top: 0; }
 
   /* The footer, at the large sizes needs to be a sticky footer. */
   html, body {
