@@ -29,7 +29,7 @@ header,footer{
     background-color: $header-footer-backgroundcolor;
 }
 
-@include fill-svg(".iconic", $svg-fill-color);
+@include style-svg($svg-fill-color);
 
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
     .col-3{
@@ -51,6 +51,7 @@ header,footer{
     /* The third row will be four equal columns. */
     .col-4{
         @include equalSpaced(4, 5%, 100%);
+        min-height: 240px;
     }
 
     /* The footer, at the large sizes needs to be a sticky footer. */

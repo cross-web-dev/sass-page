@@ -32,8 +32,15 @@
 
 }
 
-@mixin fill-svg( $svg-selector , $color){
-    #{$svg-selector} {
-        fill: $color;
+@mixin style-svg($color){
+    .accent .iconic *{
+      /* default colour for all paths except
+      the one referred to as the accent */
+      fill: $color;
+      stroke: $color;
+    }
+    .accent .iconic-property-accent {
+      fill: $svg-accent-color;
+      stroke: $svg-accent-color;
     }
 }
