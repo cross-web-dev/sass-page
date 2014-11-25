@@ -12,26 +12,31 @@
   }
 }
 
+.wrapper{
+    max-width: 90%;
+    margin: 0 auto;
+    background-color: $wrapper-backgroundcolor;
+}
+
 .row{
     @extend .clearfix;
 }
 
+header,footer{
+    background-color: $header-footer-backgroundcolor;
+}
+
 @include fill-svg(".iconic", $svg-fill-color);
 
-@media screen and (min-width: $breakpoint-small){
-    body{
-//        background-color: blue;
-    }
+@media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
 
     .wrapper{
             max-width: $breakpoint-small;
-//            background-color: orange;
-            margin: 0 auto;
         }
 
     .col-3{
             @include equalSpaced(2, 5%, 100%);
-            min-height: 420px;
+            min-height: 320px;
     }
 
     .col-4{
@@ -40,28 +45,21 @@
 }
 
 @media screen and (min-width: $breakpoint-large){
-    body{
-        background-color: blue;
-    }
     .wrapper{
         max-width: $breakpoint-large;
-        background-color: yellow;
-        margin: 0 auto;
     }
 
     /* The second row has the svg image boxes as three equal columns. */
     .col-3{
-        background: #ccc;
         @include equalSpaced(3, 5%, 100%);
 
     }
 
     /* The third row will be four equal columns. */
     .col-4{
-        background: #aaa;
         @include equalSpaced(4, 5%, 100%);
     }
 
     /* The footer, at the large sizes needs to be a sticky footer. */
-    @include stickFooter($Sticky-footer-height,".wrapper", ".foot");
+    @include stickFooter($Sticky-footer-height);
 }

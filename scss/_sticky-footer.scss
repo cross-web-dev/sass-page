@@ -1,26 +1,16 @@
-@mixin stickFooter($height, $wrapper-selector, $footer-selector){
-    html,body{
-        height: 100%;
-    }
-
-    /* Use interpolation syntax to use SassScript variables in selectors and property names*/
-    #{$wrapper-selector} {
+@mixin stickFooter($height){
+    html {
+        position: relative;
         min-height: 100%;
-        /* equal to footer height */
-        margin-bottom: -$height;
     }
-
-    #{$wrapper-selector}:after {
-        content: "";
-        display: block;
+    body {
+        margin: 0 0 $height; /* bottom = footer height */
     }
-
-    #{$footer-selector}, #{$wrapper-selector}:after {
-        /* .push must be the same height as footer */
+    footer {
+        position: absolute;
+        left: 2.3%;
+        bottom: 0;
         height: $height;
-    }
-
-    #{$footer-selector} {
-        background: orange;
+        width: 95.5%;
     }
 }

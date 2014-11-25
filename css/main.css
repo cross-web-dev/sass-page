@@ -193,20 +193,27 @@ input[type="checkbox"], input[type="radio"] {
   display: table;
   clear: both; }
 
+.wrapper {
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: #eee; }
+
+header, footer {
+  background-color: #f8ebfa; }
+
 .iconic {
   fill: #c0a5ab; }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) and (max-width: 960px) {
   .wrapper {
-    max-width: 600px;
-    margin: 0 auto; }
+    max-width: 600px; }
 
   .col-3 {
     width: 47.5%;
     margin-left: 5%;
     margin-top: 5%;
     float: left;
-    min-height: 420px; }
+    min-height: 320px; }
     .col-3:first-child {
       margin-left: 0; }
     .col-3:nth-child(2n + 1) {
@@ -230,17 +237,11 @@ input[type="checkbox"], input[type="radio"] {
     .col-4:nth-child(2) {
       margin-top: 0; } }
 @media screen and (min-width: 960px) {
-  body {
-    background-color: blue; }
-
   .wrapper {
-    max-width: 960px;
-    background-color: yellow;
-    margin: 0 auto; }
+    max-width: 960px; }
 
   /* The second row has the svg image boxes as three equal columns. */
   .col-3 {
-    background: #ccc;
     width: 30%;
     margin-left: 5%;
     margin-top: 5%;
@@ -258,7 +259,6 @@ input[type="checkbox"], input[type="radio"] {
 
   /* The third row will be four equal columns. */
   .col-4 {
-    background: #aaa;
     width: 21.25%;
     margin-left: 5%;
     margin-top: 5%;
@@ -277,24 +277,19 @@ input[type="checkbox"], input[type="radio"] {
       margin-top: 0; }
 
   /* The footer, at the large sizes needs to be a sticky footer. */
-  html, body {
-    height: 100%; }
+  html {
+    position: relative;
+    min-height: 100%; }
 
-  /* Use interpolation syntax to use SassScript variables in selectors and property names*/
-  .wrapper {
-    min-height: 100%;
-    /* equal to footer height */
-    margin-bottom: -65px; }
+  body {
+    margin: 0 0 80px;
+    /* bottom = footer height */ }
 
-  .wrapper:after {
-    content: "";
-    display: block; }
-
-  .foot, .wrapper:after {
-    /* .push must be the same height as footer */
-    height: 65px; }
-
-  .foot {
-    background: orange; } }
+  footer {
+    position: absolute;
+    left: 2.3%;
+    bottom: 0;
+    height: 80px;
+    width: 95.5%; } }
 
 /*# sourceMappingURL=main.css.map */
