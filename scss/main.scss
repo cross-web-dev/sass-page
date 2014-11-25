@@ -15,18 +15,26 @@
 body{
     background-color: #999;
 }
+
 .wrapper{
     max-width: 90%;
     margin: 0 auto;
     background-color: $wrapper-backgroundcolor;
 }
 
-.row{
-    @extend .clearfix;
+.col-3, .col-4{
+    max-width: 90%;
+    margin: 0 auto 4% auto;
+    box-sizing: border-box;
 }
 
 header,footer{
     background-color: $header-footer-backgroundcolor;
+    padding: 1% 0 0 5%;
+}
+
+.row{
+    @extend .clearfix;
 }
 
 @include style-svg($svg-fill-color);

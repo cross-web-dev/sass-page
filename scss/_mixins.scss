@@ -14,12 +14,14 @@
   // Remove Spacing from First Child
   &:first-child{
     margin-left: 0;
+    padding-left: 5%;
   }
 
 
   // Remove margin-left of the first element in each row.
   &:nth-child( #{$num_of_cols}n + 1){
     margin-left: 0;
+    padding-left: 5%;
   }
 
   // Top Row Remove Margin Top from First Row of Columns

@@ -201,8 +201,14 @@ body {
   margin: 0 auto;
   background-color: #eee; }
 
+.col-3, .col-4 {
+  max-width: 90%;
+  margin: 0 auto 4% auto;
+  box-sizing: border-box; }
+
 header, footer {
-  background-color: #f8ebfa; }
+  background-color: #f8ebfa;
+  padding: 1% 0 0 5%; }
 
 .accent .iconic * {
   /* default colour for all paths except
@@ -222,9 +228,11 @@ header, footer {
     float: left;
     min-height: 320px; }
     .col-3:first-child {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-3:nth-child(2n + 1) {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-3:nth-child(1) {
       margin-top: 0; }
     .col-3:nth-child(2) {
@@ -236,9 +244,11 @@ header, footer {
     margin-top: 5%;
     float: left; }
     .col-4:first-child {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-4:nth-child(2n + 1) {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-4:nth-child(1) {
       margin-top: 0; }
     .col-4:nth-child(2) {
@@ -251,9 +261,11 @@ header, footer {
     margin-top: 5%;
     float: left; }
     .col-3:first-child {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-3:nth-child(3n + 1) {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-3:nth-child(1) {
       margin-top: 0; }
     .col-3:nth-child(2) {
@@ -269,9 +281,11 @@ header, footer {
     float: left;
     min-height: 240px; }
     .col-4:first-child {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-4:nth-child(4n + 1) {
-      margin-left: 0; }
+      margin-left: 0;
+      padding-left: 5%; }
     .col-4:nth-child(1) {
       margin-top: 0; }
     .col-4:nth-child(2) {
