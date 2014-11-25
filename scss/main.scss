@@ -12,6 +12,9 @@
   }
 }
 
+body{
+    background-color: #999;
+}
 .wrapper{
     max-width: 90%;
     margin: 0 auto;
@@ -29,11 +32,6 @@ header,footer{
 @include fill-svg(".iconic", $svg-fill-color);
 
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
-
-    .wrapper{
-            max-width: $breakpoint-small;
-        }
-
     .col-3{
             @include equalSpaced(2, 5%, 100%);
             min-height: 320px;
@@ -45,14 +43,9 @@ header,footer{
 }
 
 @media screen and (min-width: $breakpoint-large){
-    .wrapper{
-        max-width: $breakpoint-large;
-    }
-
     /* The second row has the svg image boxes as three equal columns. */
     .col-3{
         @include equalSpaced(3, 5%, 100%);
-
     }
 
     /* The third row will be four equal columns. */

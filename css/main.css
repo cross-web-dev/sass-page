@@ -193,6 +193,9 @@ input[type="checkbox"], input[type="radio"] {
   display: table;
   clear: both; }
 
+body {
+  background-color: #999; }
+
 .wrapper {
   max-width: 90%;
   margin: 0 auto;
@@ -205,9 +208,6 @@ header, footer {
   fill: #c0a5ab; }
 
 @media screen and (min-width: 600px) and (max-width: 960px) {
-  .wrapper {
-    max-width: 600px; }
-
   .col-3 {
     width: 47.5%;
     margin-left: 5%;
@@ -237,9 +237,6 @@ header, footer {
     .col-4:nth-child(2) {
       margin-top: 0; } }
 @media screen and (min-width: 960px) {
-  .wrapper {
-    max-width: 960px; }
-
   /* The second row has the svg image boxes as three equal columns. */
   .col-3 {
     width: 30%;
@@ -277,19 +274,17 @@ header, footer {
       margin-top: 0; }
 
   /* The footer, at the large sizes needs to be a sticky footer. */
-  html {
-    position: relative;
+  html, body {
     min-height: 100%; }
 
-  body {
-    margin: 0 0 80px;
-    /* bottom = footer height */ }
+  .wrapper {
+    min-height: 100%; }
 
-  footer {
-    position: absolute;
-    left: 2.3%;
-    bottom: 0;
+  .foot {
+    position: relative;
+    margin-top: -80px;
+    /* negative value of footer height */
     height: 80px;
-    width: 95.5%; } }
+    clear: both; } }
 
 /*# sourceMappingURL=main.css.map */

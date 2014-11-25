@@ -1,16 +1,11 @@
 @mixin stickFooter($height){
-    html {
-        position: relative;
-        min-height: 100%;
-    }
-    body {
-        margin: 0 0 $height; /* bottom = footer height */
-    }
-    footer {
-        position: absolute;
-        left: 2.3%;
-        bottom: 0;
-        height: $height;
-        width: 95.5%;
+html, body {min-height: 100%;}
+
+.wrapper {min-height: 100%;}
+
+.foot {position: relative;
+	margin-top: -$height; /* negative value of footer height */
+	height: $height;
+	clear:both;
     }
 }
