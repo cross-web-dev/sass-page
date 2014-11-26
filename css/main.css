@@ -210,7 +210,16 @@ header, footer {
   background-color: #f8ebfa;
   padding: 1% 0 0 5%; }
 
-/*Text animation start*/
+.accent .iconic * {
+  /* default colour for all paths except
+  the one referred to as the accent */
+  fill: #aa888f;
+  stroke: #aa888f; }
+
+.accent .iconic-property-accent {
+  fill: #e2afe9;
+  stroke: #e2afe9; }
+
 .box {
   position: relative;
   text-align: center;
@@ -227,7 +236,7 @@ header, footer {
 
 .box svg {
   transform: scaleY(1);
-  transition: all .2s ease-in-out;
+  transition: all .7s ease-in-out;
   width: 200px;
   height: 150px; }
 
@@ -244,16 +253,19 @@ header, footer {
 .box:hover .mask {
   opacity: 1; }
 
-/* Text animation end*/
-.accent .iconic * {
-  /* default colour for all paths except
-  the one referred to as the accent */
-  fill: #aa888f;
-  stroke: #aa888f; }
+.col-4 p {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0s ease-out .1s;
+  -moz-transition: all 0s ease .1s;
+  -o-transition: all 0s ease .1s;
+  -ms-transition: all 0s ease .1s;
+  transition: opacity 0s ease-out .1s; }
 
-.accent .iconic-property-accent {
-  fill: #e2afe9;
-  stroke: #e2afe9; }
+.col-4 > h4:hover + p {
+  height: auto;
+  opacity: 1; }
 
 @media screen and (min-width: 600px) and (max-width: 960px) {
   .col-3 {

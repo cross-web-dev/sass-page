@@ -37,48 +37,10 @@ header,footer{
     @extend .clearfix;
 }
 
-/*Text animation start*/
-.box{
-    position: relative;
-    text-align: center;
-    overflow: hidden;
-}
-.box .mask{
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    margin-left: 20%;
-}
-.box svg {
-    transform: scaleY(1);
-    transition: all .7s ease-in-out;
-    width: 200px;
-    height: 150px;
-}
 
-.box .mask {
-    background-color: rgba(255, 231, 179, 0.3);
-    transition: all 0.5s linear;
-    opacity: 0;
-}
-
-.box:hover svg {
-  -webkit-transform: scale(2);
-  transform: scale(2);
-    opacity: 0;
-}
-
-.box:hover .mask {
-    opacity: 1;
-}
-
-
-
-/* Text animation end*/
 @include style-svg($svg-fill-color);
+@include animate-text-svg();
+@include animate-text();
 
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
     .col-3{
