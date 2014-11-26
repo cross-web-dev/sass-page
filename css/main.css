@@ -194,12 +194,23 @@ input[type="checkbox"], input[type="radio"] {
   clear: both; }
 
 body {
-  background-color: #999; }
+  background-color: #555; }
 
 .wrapper {
   max-width: 90%;
   margin: 0 auto;
-  background-color: #eee; }
+  background: -moz-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  /* Chrome,Safari4+ */
+  background: -webkit-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* Opera 12+ */
+  background: -ms-radial-gradient(center, ellipse cover, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* IE10+ */
+  background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0) 100%);
+  /* W3C */ }
 
 .col-3, .col-4 {
   max-width: 90%;
@@ -213,12 +224,12 @@ header, footer {
 .accent .iconic * {
   /* default colour for all paths except
   the one referred to as the accent */
-  fill: #aa888f;
-  stroke: #aa888f; }
+  fill: #956a72;
+  stroke: #956a72; }
 
 .accent .iconic-property-accent {
-  fill: #e2afe9;
-  stroke: #e2afe9; }
+  fill: #c65fd3;
+  stroke: #c65fd3; }
 
 .box {
   position: relative;
@@ -241,7 +252,6 @@ header, footer {
   height: 150px; }
 
 .box .mask {
-  background-color: rgba(255, 231, 179, 0.3);
   transition: all 0.5s linear;
   opacity: 0; }
 
