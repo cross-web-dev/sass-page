@@ -277,6 +277,29 @@ header, footer {
   height: auto;
   opacity: 1; }
 
+button {
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: .5em 2em .55em;
+  border-radius: 0.5em;
+  color: #fff !important;
+  border: solid 1px #c153d0;
+  background: #db9be4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e291ed), to(#c65fd3));
+  background: -moz-linear-gradient(top, #e291ed, #c65fd3); }
+  button:hover {
+    text-decoration: none;
+    background: #e095ea;
+    background: -webkit-gradient(linear, left top, left bottom, from(#de98e7), to(#cd73d9));
+    background: -moz-linear-gradient(top, #de98e7, #cd73d9); }
+  button:active {
+    position: relative;
+    top: 1px;
+    color: #e291ed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e291ed), to(#f1d7f4));
+    background: -moz-linear-gradient(top, #e291ed, #f1d7f4); }
+
 @media screen and (min-width: 600px) and (max-width: 960px) {
   .col-3 {
     width: 47.5%;

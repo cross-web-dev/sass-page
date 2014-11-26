@@ -42,6 +42,9 @@ header,footer{
 @include animate-text-svg();
 @include animate-text();
 
+button{
+    @include style-button(lighten($svg-accent-color, 15%),#fff);
+}
 
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
     .col-3{
