@@ -41,6 +41,7 @@ header,footer{
 @include style-svg($svg-fill-color);
 @include animate-text-svg();
 @include animate-text();
+@include stickFooter($Sticky-footer-height);
 
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
     .col-3{
@@ -64,7 +65,4 @@ header,footer{
         @include equalSpaced(4, 5%, 100%);
         min-height: 240px;
     }
-
-    /* The footer, at the large sizes needs to be a sticky footer. */
-    @include stickFooter($Sticky-footer-height);
 }
