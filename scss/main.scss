@@ -41,16 +41,17 @@ header,footer{
 @include style-svg($svg-fill-color);
 @include animate-text-svg();
 @include animate-text();
-@include stickFooter($Sticky-footer-height);
+
 
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
     .col-3{
             @include equalSpaced(2, 5%, 100%);
-            min-height: 320px;
+            //min-height: 154px;
     }
 
     .col-4{
         @include equalSpaced(2, 5%, 100%);
+        min-height: 154px;
     }
 }
 
@@ -65,4 +66,6 @@ header,footer{
         @include equalSpaced(4, 5%, 100%);
         min-height: 240px;
     }
+
+    @include stickFooter($Sticky-footer-height);
 }
