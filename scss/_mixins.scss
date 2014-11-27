@@ -50,29 +50,30 @@
 @mixin animate-text-svg(){
     .box{
         position: relative;
-        text-align: center;
+        text-align: left;
         overflow: hidden;
     }
     .box .mask{
-        width: 200px;
-        height: 150px;
+        width: 100%;
         position: absolute;
-        overflow: hidden;
+//        overflow: hidden;
+        opacity: 0;
         top: 0;
         left: 0;
-        margin-left: 20%;
+        transition: all 0.5s linear;
+
     }
+
+/* Add the following part for large screen only*/
+//    .box:first-child .mask{
+//        box-sizing: border-box;
+//        padding-left: 19%;
+//    }
+
     .box svg {
         transform: scaleY(1);
         transition: all .7s ease-in-out;
-        width: 200px;
-        height: 150px;
-    }
-
-    .box .mask {
-//        background-color: rgba(255, 231, 179, 0.3);
-        transition: all 0.5s linear;
-        opacity: 0;
+        width: 30%;
     }
 
     .box:hover svg {

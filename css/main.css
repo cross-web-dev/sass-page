@@ -212,10 +212,16 @@ body {
   background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0) 100%);
   /* W3C */ }
 
-.col-3, .col-4 {
-  max-width: 90%;
-  margin: 0 auto 4% auto;
-  box-sizing: border-box; }
+h1, h2, h3, h4, h5 {
+  font-family: 'Nova Mono', cursive; }
+
+p {
+  font-family: 'Nova Slim', cursive; }
+
+.col-3 {
+  margin-top: 20%; }
+  .col-3:first-child {
+    margin-top: 0; }
 
 header, footer {
   background-color: #f8ebfa;
@@ -230,52 +236,6 @@ header, footer {
 .accent .iconic-property-accent {
   fill: #c65fd3;
   stroke: #c65fd3; }
-
-.box {
-  position: relative;
-  text-align: center;
-  overflow: hidden; }
-
-.box .mask {
-  width: 200px;
-  height: 150px;
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  margin-left: 20%; }
-
-.box svg {
-  transform: scaleY(1);
-  transition: all .7s ease-in-out;
-  width: 200px;
-  height: 150px; }
-
-.box .mask {
-  transition: all 0.5s linear;
-  opacity: 0; }
-
-.box:hover svg {
-  -webkit-transform: scale(2);
-  transform: scale(2);
-  opacity: 0; }
-
-.box:hover .mask {
-  opacity: 1; }
-
-.col-4 p {
-  height: 0;
-  overflow: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 0s ease-out .1s;
-  -moz-transition: all 0s ease .1s;
-  -o-transition: all 0s ease .1s;
-  -ms-transition: all 0s ease .1s;
-  transition: opacity 0s ease-out .1s; }
-
-.col-4 > h4:hover + p {
-  height: auto;
-  opacity: 1; }
 
 button {
   cursor: pointer;
@@ -300,6 +260,35 @@ button {
     background: -webkit-gradient(linear, left top, left bottom, from(#e291ed), to(#f1d7f4));
     background: -moz-linear-gradient(top, #e291ed, #f1d7f4); }
 
+/* Animation starts here. */
+.box {
+  position: relative;
+  text-align: left;
+  padding-left: 5%; }
+
+.box .mask {
+  width: 90%;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.5s linear;
+  padding-left: 5%; }
+
+.box svg {
+  transform: scaleY(1);
+  transition: all .7s ease-in-out;
+  width: 30%; }
+
+.box:hover svg {
+  -webkit-transform: scale(2);
+  transform: scale(2);
+  opacity: 0; }
+
+.box:hover .mask {
+  opacity: 1; }
+
+/* Animatio ends here */
 @media screen and (min-width: 600px) and (max-width: 960px) {
   .col-3 {
     width: 47.5%;
