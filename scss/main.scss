@@ -47,13 +47,83 @@ button{
 }
 
 /* Animation starts here. */
+.col-3 {
+    min-height: 200px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+
+    .mask{
+        position: absolute;
+        overflow: hidden;
+        width: 90%;
+        margin: 0 5%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        background-color: $header-footer-backgroundcolor;
+        transition: all 0.4s ease-in-out;
+    }
+
+    img {
+        display: block;
+        position: relative;
+        transition: all 0.2s linear;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        margin: 10px 0 0 0;
+
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+
+    }
+
+    p {
+        font-style: italic;
+        font-size: 12px;
+        position: relative;
+        padding: 10px 20px 20px;
+        text-align: left;
+
+        transform: translateY(100px);
+        opacity: 0;
+        transition: all 0.2s linear;
+    }
+
+}
+
+/*dynamic part of the animation. */
+.col-3:hover img {
+    transform: scale(1.1);
+}
+.col-3:hover .mask {
+    opacity: 1;
+}
+.col-3:hover h3,
+.col-3:hover p{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.col-3:hover p {
+    transition-delay: 0.1s;
+}
 
 /* Animatio ends here */
 @media screen and (min-width: $breakpoint-small) and (max-width: $breakpoint-large){
 
     .col-3{
             @include equalSpaced(2, 5%, 100%);
-            height: 290px;
+            min-height: 150px;
     }
 
     .col-4{
@@ -67,6 +137,7 @@ button{
     /* The second row has the svg image boxes as three equal columns. */
     .col-3{
         @include equalSpaced(3, 5%, 100%);
+        min-height: 200px;
     }
 
     /* The third row will be four equal columns. */
