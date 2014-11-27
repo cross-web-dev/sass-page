@@ -23,11 +23,11 @@
   }
 
   // Top Row Remove Margin Top from First Row of Columns
-  @for $i from 1 through $num_of_cols {
-      &:nth-child(#{$i}) {
-          margin-top: 0;
-      }
-  }
+//  @for $i from 1 through $num_of_cols {
+//      &:nth-child(#{$i}) {
+//          margin-top: 0;
+//      }
+//  }
 
 
 }

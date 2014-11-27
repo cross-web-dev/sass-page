@@ -212,9 +212,15 @@ body {
   background: radial-gradient(ellipse at center, white 0%, rgba(255, 255, 255, 0) 100%);
   /* W3C */ }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Nova Mono', cursive; }
+
+p {
+  font-family: 'Nova Slim', cursive; }
+
 header, footer {
   background-color: #f8ebfa;
-  padding: 1% 0 0 5%; }
+  padding: 1% 0 1% 5%; }
 
 .accent .iconic * {
   /* default colour for all paths except
@@ -249,6 +255,12 @@ button {
     background: -webkit-gradient(linear, left top, left bottom, from(#e291ed), to(#f1d7f4));
     background: -moz-linear-gradient(top, #e291ed, #f1d7f4); }
 
+.col-4 {
+  box-sizing: border-box;
+  margin-bottom: 5%;
+  padding-left: 5%;
+  padding-right: 1%; }
+
 /* Animation starts here. */
 .col-3 {
   min-height: 200px;
@@ -256,6 +268,8 @@ button {
   position: relative;
   text-align: center;
   cursor: default; }
+  .col-3:first-child {
+    margin-top: 5%; }
   .col-3 .mask {
     position: absolute;
     overflow: hidden;
@@ -314,15 +328,11 @@ button {
     margin-left: 5%;
     margin-top: 5%;
     float: left;
-    min-height: 150px; }
+    min-height: 190px; }
     .col-3:first-child {
       margin-left: 0; }
     .col-3:nth-child(2n + 1) {
       margin-left: 0; }
-    .col-3:nth-child(1) {
-      margin-top: 0; }
-    .col-3:nth-child(2) {
-      margin-top: 0; }
 
   .col-4 {
     width: 47.5%;
@@ -332,11 +342,7 @@ button {
     .col-4:first-child {
       margin-left: 0; }
     .col-4:nth-child(2n + 1) {
-      margin-left: 0; }
-    .col-4:nth-child(1) {
-      margin-top: 0; }
-    .col-4:nth-child(2) {
-      margin-top: 0; } }
+      margin-left: 0; } }
 @media screen and (min-width: 960px) {
   /* The second row has the svg image boxes as three equal columns. */
   .col-3 {
@@ -349,12 +355,6 @@ button {
       margin-left: 0; }
     .col-3:nth-child(3n + 1) {
       margin-left: 0; }
-    .col-3:nth-child(1) {
-      margin-top: 0; }
-    .col-3:nth-child(2) {
-      margin-top: 0; }
-    .col-3:nth-child(3) {
-      margin-top: 0; }
 
   /* The third row will be four equal columns. */
   .col-4 {
@@ -367,14 +367,6 @@ button {
       margin-left: 0; }
     .col-4:nth-child(4n + 1) {
       margin-left: 0; }
-    .col-4:nth-child(1) {
-      margin-top: 0; }
-    .col-4:nth-child(2) {
-      margin-top: 0; }
-    .col-4:nth-child(3) {
-      margin-top: 0; }
-    .col-4:nth-child(4) {
-      margin-top: 0; }
 
   html, body {
     min-height: 100%; }

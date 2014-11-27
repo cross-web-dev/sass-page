@@ -23,16 +23,17 @@ body{
 }
 
 h1,h2,h3,h4,h5{
-//    font-family: 'Nova Mono', cursive;
+    font-family: 'Nova Mono', cursive;
 }
 
 p{
-//    font-family: 'Nova Slim', cursive;
+    font-family: 'Nova Slim', cursive;
 }
+
 
 header,footer{
     background-color: $header-footer-backgroundcolor;
-    padding: 1% 0 0 5%;
+    padding: 1% 0 1% 5%;
 }
 
 .row{
@@ -46,8 +47,19 @@ button{
     @include style-button(lighten($svg-accent-color, 15%),#fff);
 }
 
+.col-4{
+    box-sizing: border-box;
+    margin-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 1%;
+}
+
 /* Animation starts here. */
 .col-3 {
+    &:first-child{
+        margin-top: 5%;
+    }
+
     min-height: 200px;
     overflow: hidden;
     position: relative;
@@ -123,7 +135,7 @@ button{
 
     .col-3{
             @include equalSpaced(2, 5%, 100%);
-            min-height: 150px;
+            min-height: 190px;
     }
 
     .col-4{
